@@ -51,6 +51,9 @@ export const reviewsToday = (dailyActivity: Record<string, number>): number => {
   return dailyActivity[today] ?? 0
 }
 
+// A card is considered "weak" if it has been rated Again or Hard at least once,
+// or if the most recent rating was again/hard. This ensures cards show up in
+// Weak Areas mode promptly after the first difficult review.
 export const getWeakCards = (cards: Card[], reviewByCardId: Record<string, ReviewState>): Card[] =>
   cards.filter((card) => {
     const review = reviewByCardId[card.id]
@@ -58,5 +61,5 @@ export const getWeakCards = (cards: Card[], reviewByCardId: Record<string, Revie
       return false
     }
 
-    return review.againCount + review.hardCount >= 2
+    return review.againCount + review.hardCount >= 1
   })
