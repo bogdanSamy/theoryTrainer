@@ -1,0 +1,30 @@
+{
+  "topic": "Microservices",
+  "cards": [
+    {
+      "id": "microservices-001",
+      "question": "What is the database-per-service pattern?",
+      "answer": "Each microservice owns its data store to reduce coupling and enforce clear service boundaries."
+    },
+    {
+      "id": "microservices-002",
+      "question": "Why is distributed tracing important?",
+      "answer": "Tracing correlates requests across services, helping diagnose latency and failures in complex call chains."
+    },
+    {
+      "id": "microservices-003",
+      "question": "What is circuit breaker pattern used for?",
+      "answer": "It prevents cascading failures by stopping calls to an unhealthy dependency and allowing fallback behavior."
+    },
+    {
+      "id": "microservices-004",
+      "question": "Difference between orchestration and choreography?",
+      "answer": "Orchestration uses a central coordinator; choreography uses event-driven collaboration where services react to events independently."
+    },
+    {
+      "id": "microservices-005",
+      "question": "How does eventual consistency relate to microservices?",
+      "answer": "Data across services may temporarily diverge but converge over time through asynchronous messaging and retries."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "topic": "Java Core",
+  "cards": [
+    {
+      "id": "java-core-001",
+      "question": "What is the contract between equals and hashCode?",
+      "answer": "If two objects are equal according to equals, they must return the same hashCode; otherwise hash-based collections break."
+    },
+    {
+      "id": "java-core-002",
+      "question": "What is the difference between checked and unchecked exceptions?",
+      "answer": "Checked exceptions must be declared or handled at compile time, while unchecked exceptions extend RuntimeException and are optional to catch."
+    },
+    {
+      "id": "java-core-003",
+      "question": "Why is String immutable in Java?",
+      "answer": "Immutability improves security, thread-safety, string pool reuse, and predictability for hashing and class loading behavior."
+    },
+    {
+      "id": "java-core-004",
+      "question": "How does try-with-resources work?",
+      "answer": "It automatically closes resources implementing AutoCloseable, even when exceptions occur, reducing boilerplate and leaks."
+    },
+    {
+      "id": "java-core-005",
+      "question": "Difference between final, finally, and finalize?",
+      "answer": "final restricts modification/inheritance, finally is a block executed after try/catch, and finalize is deprecated GC cleanup hook."
+    }
+  ]
+}

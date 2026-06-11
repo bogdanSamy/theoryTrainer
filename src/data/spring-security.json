@@ -1,0 +1,35 @@
+{
+  "topic": "Spring Security",
+  "cards": [
+    {
+      "id": "spring-security-001",
+      "question": "What is the purpose of the SecurityFilterChain bean?",
+      "answer": "SecurityFilterChain defines HTTP security rules, authentication mechanisms, and authorization behavior for incoming requests."
+    },
+    {
+      "id": "spring-security-002",
+      "question": "What is the difference between authentication and authorization?",
+      "answer": "Authentication verifies who the user is, while authorization determines what that user is allowed to access."
+    },
+    {
+      "id": "spring-security-003",
+      "question": "Why is CSRF protection enabled by default for browser apps?",
+      "answer": "It prevents forged state-changing requests from malicious sites by requiring a valid token tied to the user session."
+    },
+    {
+      "id": "spring-security-004",
+      "question": "What is a PasswordEncoder and why should BCrypt be used?",
+      "answer": "PasswordEncoder hashes and verifies passwords; BCrypt is adaptive and slow by design, making brute-force attacks harder."
+    },
+    {
+      "id": "spring-security-005",
+      "question": "How do method-level annotations like @PreAuthorize work?",
+      "answer": "@PreAuthorize evaluates SpEL expressions before method execution, allowing role, authority, and contextual access checks."
+    },
+    {
+      "id": "spring-security-006",
+      "question": "When would you choose stateless JWT authentication?",
+      "answer": "JWT is useful for stateless APIs and distributed systems where session storage is undesirable, but token revocation needs extra design."
+    }
+  ]
+}

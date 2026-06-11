@@ -1,0 +1,30 @@
+{
+  "topic": "Kafka",
+  "cards": [
+    {
+      "id": "kafka-001",
+      "question": "What is a Kafka partition and why does it matter?",
+      "answer": "A partition is an ordered log shard of a topic; it enables parallelism and determines message ordering scope."
+    },
+    {
+      "id": "kafka-002",
+      "question": "Difference between at-most-once and at-least-once delivery?",
+      "answer": "At-most-once may lose messages but avoids duplicates; at-least-once avoids loss but may produce duplicates requiring idempotency."
+    },
+    {
+      "id": "kafka-003",
+      "question": "What does consumer group rebalancing do?",
+      "answer": "Rebalancing redistributes partitions among group members when consumers join/leave, ensuring load sharing and failover."
+    },
+    {
+      "id": "kafka-004",
+      "question": "Why use key-based partitioning?",
+      "answer": "Records with the same key go to the same partition, preserving per-key order for processing logic."
+    },
+    {
+      "id": "kafka-005",
+      "question": "What is idempotent producer in Kafka?",
+      "answer": "Idempotent producer prevents duplicate writes caused by retries by assigning sequence numbers and producer IDs."
+    }
+  ]
+}

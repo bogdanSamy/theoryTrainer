@@ -1,0 +1,35 @@
+{
+  "topic": "Spring Core",
+  "cards": [
+    {
+      "id": "spring-core-001",
+      "question": "What is Inversion of Control (IoC) in Spring?",
+      "answer": "IoC means Spring manages object creation and wiring, so classes receive dependencies instead of creating them manually."
+    },
+    {
+      "id": "spring-core-002",
+      "question": "When should you use constructor injection over field injection?",
+      "answer": "Constructor injection is preferred because dependencies are explicit, immutable, and test-friendly; field injection hides required dependencies."
+    },
+    {
+      "id": "spring-core-003",
+      "question": "What is the difference between singleton and prototype bean scopes?",
+      "answer": "Singleton creates one shared bean per container, while prototype creates a new bean instance each time it is requested."
+    },
+    {
+      "id": "spring-core-004",
+      "question": "How does @Primary help when multiple beans of the same type exist?",
+      "answer": "@Primary marks one bean as the default candidate during autowiring unless another bean is explicitly selected with @Qualifier."
+    },
+    {
+      "id": "spring-core-005",
+      "question": "What is the purpose of @Configuration classes?",
+      "answer": "@Configuration classes define bean creation methods with @Bean and centralize wiring logic for the application context."
+    },
+    {
+      "id": "spring-core-006",
+      "question": "Why is ApplicationContext preferred over BeanFactory in most applications?",
+      "answer": "ApplicationContext extends BeanFactory and adds enterprise features like events, i18n, AOP integration, and eager singleton initialization."
+    }
+  ]
+}
