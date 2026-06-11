@@ -1,0 +1,35 @@
+{
+  "topic": "JVM",
+  "cards": [
+    {
+      "id": "jvm-001",
+      "question": "What is the difference between heap and stack memory in JVM?",
+      "answer": "Heap stores objects shared across threads, while stack stores method frames and local variables per thread."
+    },
+    {
+      "id": "jvm-002",
+      "question": "What causes a StackOverflowError?",
+      "answer": "Typically deep or infinite recursion that keeps pushing stack frames until the thread stack memory limit is exceeded."
+    },
+    {
+      "id": "jvm-003",
+      "question": "What is the difference between minor and major GC?",
+      "answer": "Minor GC collects young generation objects; major/full GC involves old generation and usually has higher pause impact."
+    },
+    {
+      "id": "jvm-004",
+      "question": "How does class loading delegation work?",
+      "answer": "Class loaders follow parent-first delegation: request goes up to parent loader first, then current loader if unresolved."
+    },
+    {
+      "id": "jvm-005",
+      "question": "What is Metaspace in modern JVMs?",
+      "answer": "Metaspace stores class metadata and replaced PermGen; it uses native memory and can grow up to configured limits."
+    },
+    {
+      "id": "jvm-006",
+      "question": "What information can jstack provide?",
+      "answer": "jstack captures thread dumps showing thread states, call stacks, locks, and potential deadlock information."
+    }
+  ]
+}

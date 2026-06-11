@@ -1,0 +1,35 @@
+{
+  "topic": "Concurrency",
+  "cards": [
+    {
+      "id": "concurrency-001",
+      "question": "Difference between synchronized and ReentrantLock?",
+      "answer": "Both provide mutual exclusion, but ReentrantLock offers tryLock, timed lock, interruptible lock acquisition, and fairness options."
+    },
+    {
+      "id": "concurrency-002",
+      "question": "What problem does volatile solve?",
+      "answer": "volatile ensures visibility of updates across threads and prevents certain instruction reordering, but does not provide atomicity."
+    },
+    {
+      "id": "concurrency-003",
+      "question": "When should you use ConcurrentHashMap?",
+      "answer": "Use it for thread-safe map access with high concurrency, avoiding global locking seen in synchronized map wrappers."
+    },
+    {
+      "id": "concurrency-004",
+      "question": "How does CompletableFuture improve asynchronous composition?",
+      "answer": "CompletableFuture supports non-blocking pipelines with callbacks like thenApply, thenCompose, and allOf for combining async tasks."
+    },
+    {
+      "id": "concurrency-005",
+      "question": "What is a deadlock?",
+      "answer": "Deadlock occurs when threads wait forever for resources held by each other, creating a circular wait condition."
+    },
+    {
+      "id": "concurrency-006",
+      "question": "Why use thread pools via ExecutorService?",
+      "answer": "Thread pools reduce overhead from frequent thread creation and help control concurrency, throughput, and resource usage."
+    }
+  ]
+}

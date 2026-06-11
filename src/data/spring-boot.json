@@ -1,0 +1,35 @@
+{
+  "topic": "Spring Boot",
+  "cards": [
+    {
+      "id": "spring-boot-001",
+      "question": "What does @SpringBootApplication include under the hood?",
+      "answer": "It combines @Configuration, @EnableAutoConfiguration, and @ComponentScan."
+    },
+    {
+      "id": "spring-boot-002",
+      "question": "What is auto-configuration and how does it work?",
+      "answer": "Spring Boot auto-configuration creates beans based on classpath dependencies, configuration properties, and conditional annotations."
+    },
+    {
+      "id": "spring-boot-003",
+      "question": "How can you override an auto-configured bean?",
+      "answer": "Define your own bean of the same type or name in configuration; Spring usually backs off when a user-defined bean exists."
+    },
+    {
+      "id": "spring-boot-004",
+      "question": "What are Actuator endpoints used for?",
+      "answer": "Actuator exposes production-ready endpoints for health, metrics, environment, thread dumps, and application diagnostics."
+    },
+    {
+      "id": "spring-boot-005",
+      "question": "Difference between application.properties and application.yml?",
+      "answer": "Both define configuration, but YAML is more hierarchical and concise for nested settings, while properties are key-value flat entries."
+    },
+    {
+      "id": "spring-boot-006",
+      "question": "How do profiles work in Spring Boot?",
+      "answer": "Profiles allow environment-specific configuration; activate them using spring.profiles.active or profile-specific config files."
+    }
+  ]
+}

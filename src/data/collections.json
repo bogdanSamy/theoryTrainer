@@ -1,0 +1,30 @@
+{
+  "topic": "Collections",
+  "cards": [
+    {
+      "id": "collections-001",
+      "question": "Difference between ArrayList and LinkedList?",
+      "answer": "ArrayList offers fast random access and better cache locality; LinkedList is better for frequent insertions/removals in the middle but slower generally."
+    },
+    {
+      "id": "collections-002",
+      "question": "When would you use HashMap vs TreeMap?",
+      "answer": "HashMap provides O(1) average lookup with no ordering; TreeMap keeps keys sorted with O(log n) operations."
+    },
+    {
+      "id": "collections-003",
+      "question": "What is fail-fast behavior in iterators?",
+      "answer": "Fail-fast iterators throw ConcurrentModificationException when collection structure changes during iteration outside iterator methods."
+    },
+    {
+      "id": "collections-004",
+      "question": "What does Comparable vs Comparator provide?",
+      "answer": "Comparable defines a type's natural order inside the class; Comparator provides external, customizable ordering strategies."
+    },
+    {
+      "id": "collections-005",
+      "question": "How does HashSet ensure uniqueness?",
+      "answer": "HashSet is backed by HashMap and uses hashCode and equals to detect duplicate keys."
+    }
+  ]
+}
