@@ -8,9 +8,12 @@ const slugify = (value: string): string =>
 
 const topicModules = import.meta.glob('../data/*.json', {
   eager: true,
-}) as Record<string, TopicCardCollection>
+}) as Record<string, { default: TopicCardCollection }>
 
-const topicCollections = Object.values(topicModules)
+// Unwrap the .default property that Vite sets on eagerly-loaded JSON modules
+const topicCollections: TopicCardCollection[] = Object.values(topicModules)
+  .map((mod) => mod.default)
+  .filter((tc): tc is TopicCardCollection => Boolean(tc?.topic && Array.isArray(tc.cards)))
 
 export const allCards: Card[] = topicCollections.flatMap((topicCollection) =>
   topicCollection.cards.map((card) => ({
@@ -25,7 +28,8 @@ export const allTopics = topicCollections.map((topicCollection) => ({
   cardsCount: topicCollection.cards.length,
 }))
 
-export const randomCardsPool: Card[] = [...allCards].sort(() => Math.random() - 0.5)
+/** Shuffled once per module load — use `getShuffledCards()` for a fresh shuffle each session. */
+export const getShuffledCards = (): Card[] => [...allCards].sort(() => Math.random() - 0.5)
 
 export const getCardsByTopicSlug = (slug: string): Card[] => {
   const topic = allTopics.find((entry) => entry.slug === slug)

@@ -25,7 +25,7 @@ export const DashboardPage = () => {
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="Total cards" value={allCards.length} />
-        <StatCard label="Mastered" value={mastered} helper={`${Math.round((mastered / allCards.length) * 100)}%`} />
+        <StatCard label="Mastered" value={mastered} helper={`${allCards.length ? Math.round((mastered / allCards.length) * 100) : 0}%`} />
         <StatCard label="Need review" value={due} />
         <StatCard label="Study streak" value={`${streak} day${streak === 1 ? '' : 's'}`} />
         <StatCard label="Reviews today" value={reviewsToday(dailyActivity)} />
